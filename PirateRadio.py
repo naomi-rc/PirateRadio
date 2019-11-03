@@ -94,11 +94,11 @@ def read_config():
 	except:
 		print("Error reading from config file.")
 	else:
-		play_stereo = config.get("pirateradio", 'stereo_playback', fallback=True)
+		play_stereo = config.get("pirateradio", 'stereo_playback')
 		frequency = config.get("pirateradio",'frequency')
-		shuffle = config.getboolean("pirateradio",'shuffle',fallback=False)
-		repeat_all = config.getboolean("pirateradio",'repeat_all', fallback=False)
-		music_dir = config.get("pirateradio", 'music_dir', fallback="/pirateradio")
+		shuffle = config.getboolean("pirateradio",'shuffle')
+		repeat_all = config.getboolean("pirateradio",'repeat_all')
+		music_dir = config.get("pirateradio", 'music_dir')
 
 def parse_pls(src, titleindex):
 	# breaking up the pls file in separate strings
